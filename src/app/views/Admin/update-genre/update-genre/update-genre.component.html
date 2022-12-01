@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-center ">
+
+    <div style="padding-bottom: 20px;">
+        <div class="MuiPaper-root-225 jss385 MuiPaper-elevation1-229 MuiPaper-rounded-226" style="width: 95%;margin: 0px 10px 5px;z-index: 10;position: relative;max-width: 400px;min-height: 500px;box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);border-radius: 4px;color: rgba(0, 0, 0, 0.87);transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;background-color: #fff;">
+            <div class="MuiLinearProgress-root-389 MuiLinearProgress-colorPrimary-390 MuiLinearProgress-determinate-392" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="max-width: 400px; margin-bottom: 30px; border-top-left-radius: 4px; border-top-right-radius: 4px;background-color: rgb(171, 203, 236);height: 4px;overflow: hidden;position: relative;">
+                <div class="MuiLinearProgress-bar-399 MuiLinearProgress-barColorPrimary-400 MuiLinearProgress-bar1Determinate-403" style="transform: translateX(-66.6667%);transition: transform .4s linear;background-color: #2278cf;top: 0;left: 0;width: 100%;bottom: 0;position: absolute;transition: transform 0.2s linear;transform-origin: left;"></div>
+            </div>
+            <div style="padding: 0px 35px 60px;">
+                <div style="min-height: 410px;">
+                    <div style="max-width: 400px;">
+                        <p class="MuiTypography-root-257 MuiTypography-body1-259" style="font-size: 27px; font-weight: bold;line-height: 1.5;letter-spacing: 0.00938em;">Update Genre</p>
+                        <h6 class="MuiTypography-root-257 MuiTypography-subtitle1-268" style="margin-bottom: 10px; margin-top: 8px;margin-block-start: 2.33em;margin-block-end: 2.33em;margin-inline-start: 0px;margin-inline-end: 0px;font-size: 1rem;font-family: &quot;Roboto&quot;, &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif;font-weight: 400;line-height: 1.75;letter-spacing: 0.00938em;margin: 0;">All information can be changed later.</h6>
+                        <!-- Begin form -->
+                        <br>
+                        <form [formGroup]="registerForm" (submit)="onSubmit()">
+                            <div class="form-group ">
+                                <label for="formGroupExampleInput ">Nom film</label>
+                                <input type="text " formControlName="name" for="name" [ngClass]="{ 'is-invalid':submitted && registerForm.controls['name'].errors} " name="name " class="form-control " id="formGroupExampleInput
+                      " placeholder="Name ">
+                            </div>
+
+
+                            <div class="form-group my-5">
+                                <!-- <label for="formGroupExampleInput2 ">Date</label>
+                        <input type="date " class="form-control " id="formGroupExampleInput2 " placeholder="Another input "> -->
+                                <button class="btn btn-outline-primary " type="submit ">Update</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; width: 100%; max-width: 330px; ">
+
+                    <!-- <button class="MuiButtonBase-root-316 MuiButton-root-289 MuiButton-text-291 jss383 " tabindex="0 " type="button " style="float: right;margin-right: 8px;padding: 6px 8px;color: rgba(0, 0, 0, 0.87);padding: 6px 16px;font-size:
+                      0.875rem;min-width: 64px;box-sizing: border-box;transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-family: &quot;Roboto&quot;,
+                      &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif;font-weight: 500;line-height: 1.75;border-radius: 4px;letter-spacing: 0.02857em;text-transform: uppercase;color: inherit;border: 0;cursor: pointer;margin: 0;display: inline-flex;outline:
+                      0;padding: 0;position: relative;align-items: center;user-select: none;border-radius: 0;vertical-align: middle;-moz-appearance: none;justify-content: center;text-decoration: none;background-color: transparent;-webkit-appearance:
+                      none;-webkit-tap-highlight-color: transparent; "><span class="MuiButton-label-290 " style="width: 100%;display: inherit;align-items: inherit;justify-content: inherit; ">Create</span><span class="MuiTouchRipple-root-326
+                      " style="top: 0;left: 0;right: 0;bottom: 0;z-index: 0;overflow: hidden;position: absolute;border-radius: inherit;pointer-events: none; ">
+            </span>
+        </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

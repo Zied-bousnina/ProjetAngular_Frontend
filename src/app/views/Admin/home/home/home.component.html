@@ -1,0 +1,32 @@
+<div class="container">
+
+    <button class="btn btn-primary" routerLink="/admin">Return </button>
+    <br>
+
+
+    <div class="row" *ngFor="let s of genre; index as i">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"> {{s.nomGenre}} </h5>
+                    <!-- <div _ngcontent-jwq-c57="" style="position: absolute;z-index: 222222;top: 156px;left: 94px;-webkit-text-stroke: medium;color: #212529;">
+                        <span _ngcontent-jwq-c57=""><a href="" [routerLink]="['equipe',1]"> test1</a></span>
+                    </div> -->
+
+                    <!-- <div _ngcontent-uwx-c57="" style="position: relative;top: 109px;right: -329px;-webkit-text-stroke: medium;color: #212529;">
+                        <span _ngcontent-uwx-c57=""> <a href="" [routerLink]="['equipe',1]" > test2</a></span>
+                    </div> -->
+                    <p class="card-text">
+                        <a href="" [routerLink]="['film/1']"> <img _ngcontent-uug-c57="" _ngcontent-rfl-c57="" src="assets/film.jpg" style="width: 450px;height: 198px;" class=""> </a>
+                    </p>
+                    <!-- <a href="" class="btn btn-primary mr-4" [routerLink]="['tournoi']">Tournoi </a> -->
+                    <a href="" class="btn btn-primary mx-5" [routerLink]="['film/', s.id]">Consult  Films </a>
+                    <a href="" class="btn btn-primary mx-1" [routerLink]="['updateGenre/', s.id]">Update Genre </a>
+                    <a class="btn btn-primary" (click)="delete(s.id, i)">Delete Genre </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
