@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FrontLayoutComponent } from './layouts/front-layout/front-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
+import { AppForbiddenComponent } from './layouts/app-forbidden/app-forbidden.component';
 
 const routes: Routes = [
   {path:"", component: FrontLayoutComponent, children: [
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path: "updateFilm/:id_film", loadChildren:()=>import('./views/Admin/update-film/update-film.module').then(m=>m.UpdateFilmModule)},
     {path: "updateGenre/:id_genre", loadChildren:()=>import('./views/Admin/update-genre/update-genre.module').then(m=>m.UpdateGenreModule)},
   ]},
+  {path: "app-forbidden", component: AppForbiddenComponent}
 ];
 
 @NgModule({

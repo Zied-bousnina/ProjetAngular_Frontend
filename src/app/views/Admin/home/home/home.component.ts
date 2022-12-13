@@ -14,6 +14,7 @@ import { GenreService } from '../../../../services/genre.service';
 })
 export class HomeComponent implements OnInit {
 
+  nomGenre!:String;
   genre?: Genre[] ;
   constructor(private genreService: GenreService){}
 
@@ -25,8 +26,8 @@ export class HomeComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
 
-    this.genreService.getGenreList().subscribe((data:any)=>{
-      this.genre = data;
+    this.genreService.ListGenres().subscribe((data)=>{
+      this.genre = data._embedded.genres;
 
       console.log(this.genre)
     })
@@ -46,6 +47,17 @@ export class HomeComponent implements OnInit {
     }
 
   }
+
+  rechercherGenres() {
+    this.genreService.rechercheParNom(this.nomGenre).subscribe((data)=>{
+      this.genre = data._embedded.genres;
+
+      console.log(this.genre)
+    })
+
+    console.log(this.nomGenre)
+  }
+
 
 
 

@@ -30,9 +30,11 @@ export class AddFilmComponent {
     //   adresse:['', Validators.required],
     //   tel:['', Validators.required]
     })
-    this.genreService.getGenreList().subscribe(data=>{
-      this.genre = data;
+    this.genreService.ListGenres().subscribe(data=>{
+      this.genre = data._embedded.genres;
     })
+
+    console.log(this.genre)
   }
 
   onSubmit(){

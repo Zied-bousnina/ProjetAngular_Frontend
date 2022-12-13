@@ -51,7 +51,7 @@ font-family: &quot;Roboto&quot;, &quot;Helvetica&quot;, &quot;Arial&quot;, sans-
 font-weight: 400;
 line-height: 1.5;
 letter-spacing: 0.00938em;margin: 0;">
-                                            <a href="" class="text-decoration-none pl-4" [routerLink]="['/admin/addFilm']"> add team</a>
+                                            <a href="" class="text-decoration-none pl-4" [routerLink]="['/admin/addFilm']"> add film</a>
                                         </p>
                                     </div>
                                     <div class="MuiButtonBase-root-8158 MuiIconButton-root-8150 MuiExpansionPanelSummary-expandIcon-8452 MuiIconButton-edgeEnd-8152" aria-disabled="false" aria-hidden="true" style="transform: rotate(0deg);
@@ -542,10 +542,10 @@ background-color: transparent;
 -webkit-appearance: none;
 -webkit-tap-highlight-color: transparent;">
 <!-- routerLink="/admin/participant/tournament/addPlayer" -->
-<a  (click)="delete(f.idFilm,  i)"
+<a class="btn btn-outline-danger"  (click)="delete(f.idFilm,  i)"
 
 >
- delete
+<i class="bi bi-trash3-fill"></i>
 </a>
 <span class="MuiTouchRipple-root-8168" style="top: 0;
 left: 0;
@@ -613,21 +613,9 @@ text-decoration: none;
 background-color: transparent;
 -webkit-appearance: none;
 -webkit-tap-highlight-color: transparent;">
-<a href="" [routerLink]="['/admin/updateFilm/', f.idFilm]" >
+<a  [routerLink]="['/admin/updateFilm/', f.idFilm]" >
+    <i class="bi bi-pencil-square"></i>
 
-
-<span class="MuiIconButton-label-8157" style="width: 100%;
-display: flex;
-align-items: inherit;
-justify-content: inherit;"><svg class="MuiSvgIcon-root-8159" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor;
-width: 1em;
-height: 1em;
-display: inline-block;
-font-size: 1.5rem;
-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-flex-shrink: 0;
-user-select: none;"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg>
-</span>
 </a>
 <span class="MuiTouchRipple-root-8168" style="top: 0;
 left: 0;

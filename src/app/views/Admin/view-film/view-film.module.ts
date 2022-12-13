@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ViewFilmRoutingModule } from './view-film-routing.module';
 import { ViewFilmComponent } from './view-film/view-film.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ViewFilmComponent } from './view-film/view-film.component';
   ],
   imports: [
     CommonModule,
-    ViewFilmRoutingModule
+    ViewFilmRoutingModule,
+    MatSlideToggleModule
   ]
 })
 export class ViewFilmModule { }

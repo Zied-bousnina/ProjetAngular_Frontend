@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Genre } from '../classes/genre';
+import { GenreWrapper } from '../classes/genre.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ import { Genre } from '../classes/genre';
 export class GenreService {
 
   private baseUrl = 'http://localhost:8080/film/api/genre'
+  private apiUrlGenre = 'http://localhost:8080/film/genre'
+
 
   constructor(private http:HttpClient) {  }
 
@@ -33,5 +36,14 @@ export class GenreService {
 
   addGenre(nomGenre: any){
     return this.http.post(this.baseUrl, nomGenre )
+  }
+
+  ListGenres() :Observable<GenreWrapper> {
+    return this.http.get<GenreWrapper>(this.apiUrlGenre);
+  }
+
+  rechercheParNom(nom:String):Observable<GenreWrapper> {
+    const url = `${this.apiUrlGenre}/search/findByNomGenreContains?nom=${nom}`
+    return this.http.get<GenreWrapper>(url);
   }
 }

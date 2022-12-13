@@ -12,25 +12,21 @@
                         <h6 class="MuiTypography-root-257 MuiTypography-subtitle1-268" style="margin-bottom: 10px; margin-top: 8px;margin-block-start: 2.33em;margin-block-end: 2.33em;margin-inline-start: 0px;margin-inline-end: 0px;font-size: 1rem;font-family: &quot;Roboto&quot;, &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif;font-weight: 400;line-height: 1.75;letter-spacing: 0.00938em;margin: 0;">All information can be changed later.</h6>
                         <!-- Begin form -->
                         <br>
-                        <form [formGroup]="registerForm">
+                        <form [formGroup]="registerForm" (submit)="onSubmit()">
                             <div class="form-group ">
                                 <label for="formGroupExampleInput ">Nom film</label>
-                                <input type="text " formControlName="type " for="name " formControlName="name " [ngClass]="{ 'is-invalid':submitted && registerForm.controls[ 'name'].errors} " name="name " class="form-control " id="formGroupExampleInput
+                                <input type="text " for="name " formControlName="name" [ngModel]="nomFilm" [ngClass]="{ 'is-invalid':submitted && registerForm.controls[ 'name'].errors} " name="name " class="form-control " id="formGroupExampleInput
                           " placeholder="Name ">
                             </div>
                             <div class="form-group ">
                                 <label for="formGroupExampleInput ">Duree</label>
-                                <input type="time " formControlName="type " for="name " formControlName="name " [ngClass]="{ 'is-invalid':submitted && registerForm.controls[ 'name'].errors} " name="name " class="form-control " id="formGroupExampleInput
+                                <input type="time " [placeholder]="duree" [value]="duree" formControlName="duree" for="duree " [ngClass]="{ 'is-invalid':submitted && registerForm.controls[ 'duree'].errors} " name="duree " class="form-control " id="formGroupExampleInput
                         " placeholder="Duree ">
                             </div>
                             <div class="form-group ">
                                 <label for="typeMatch ">Genre</label>
-                                <select name="type " class="form-control " id=" " formControlName="type " [ngClass]="{ 'is-invalid':submitted && registerForm.controls[ 'type'].errors} ">
-                                <!-- <option value=" ">--Select Type Tournoi--</option> -->
-                                <option value="Football ">Football</option>
-                                <option value="BasketBall ">BasketBall</option>
-                                <option value="Tenis ">Tenis</option>
-                                <option value="HandBall ">HandBall</option>
+                                <select name="genre" class="form-control " id=" " formControlName="genre" [ngClass]="{ 'is-invalid':submitted && registerForm.controls[ 'genre'].errors} ">
+                                    <option *ngFor="let g of genre" [value]="g.id" >{{g.nomGenre}}</option>
                             </select>
                             </div>
                             <div class="form-group my-5">

@@ -9,6 +9,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 import {  FormGroupDirective, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FilmService } from './services/film.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,11 @@ import { FilmService } from './services/film.service';
     FormsModule,
 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule
+
 
 
   ],
